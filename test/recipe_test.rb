@@ -5,7 +5,7 @@ require 'minitest/pride'
 class RecipeTest < Minitest::Test
   def test_it_has_a_name
     r = Recipe.new("Cheese Pizza")
-    assert_equal "Cheese Pizza", r.name
+    assert_equal "Cheese Pizza", r.name 
   end
 
   def test_it_can_add_an_ingredient
