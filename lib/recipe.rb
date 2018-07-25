@@ -1,3 +1,5 @@
+require 'pry'
+
 class Recipe
   attr_reader :name, :ingredients
 
@@ -12,6 +14,8 @@ class Recipe
 
   def add_ingredient(ingredient_name, amount)
     @ingredients[ingredient_name] = amount
+    # binding.pry 
+    @ingredients[ingredient_name]
   end
 
   def amount_required(ingredient_name)

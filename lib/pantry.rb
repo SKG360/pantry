@@ -5,6 +5,8 @@ class Pantry
 
   def initialize
     @stock = Hash.new(0)
+    @shopping_list = Hash.new(0)
+
   end
 
   def stock_check(ingredient)
@@ -13,10 +15,14 @@ class Pantry
   end
 
   def restock(ingredient, quantity)
-    @stock[ingredient] =  quantity
+    @stock[ingredient] = quantity
     @stock[:ingredient] += @stock[:ingredient]
-    # binding.pry
 
+  end
+
+  def add_to_shopping_list(ingredient, quantity)
+    @shopping_list[ingredient] = quantity
+    binding.pry
   end
 
 
